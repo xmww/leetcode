@@ -40,6 +40,21 @@ public:
         }
         return maxLen;
     }
+
+     int lengthOfLongestSubstring2(string s)
+    {
+        if(0 == s.size()) return 0;
+        int maxLen = 1;
+        int pos[256] = {0}, left = 0;
+        for(int i = 0; i < s.size(); i++)
+        {
+            if(pos[s[i]] != 0)
+            {
+                left = i + 1;
+            }
+        }
+        return maxLen;
+    }
 };
 
 int main()
